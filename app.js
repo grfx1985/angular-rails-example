@@ -14,4 +14,7 @@ function($scope){
     $scope.posts.push({title: $scope.title, upvotes: 0});
     if(!$scope.title || $scope.title === '') { return; }
   };
+  $scope.incrementUpvotes = function(post) {
+    post.upvotes += 1;
+  };
 }]);
