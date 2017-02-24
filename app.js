@@ -3,9 +3,7 @@ angular.module('flapperNews', [])
 '$scope',
 function($scope){
   $scope.test = 'Hello world!';
-  $scope.posts = [
-    {title: 'static post example', upvotes: 1},
-  ];
+  $scope.posts = [];
   $scope.addPost = function(){
     if(!$scope.title || $scope.title === '') { return; }
     $scope.posts.push({
