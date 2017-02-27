@@ -26,6 +26,7 @@ gem 'jbuilder', '~> 2.5'
 ### angular
 
 gem 'angular-rails-templates'
+gem 'responders'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

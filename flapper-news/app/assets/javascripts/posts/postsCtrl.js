@@ -4,6 +4,7 @@ angular.module('flapperNews').controller('PostsCtrl', [
 'posts',
 function($scope, $stateParams, posts){
   $scope.post = posts.posts[$stateParams.id];
+
   $scope.addComment = function(){
     if($scope.body === '') { return; }
     $scope.post.comments.push({
@@ -13,4 +14,14 @@ function($scope, $stateParams, posts){
     });
     $scope.body = '';
   };
-}]);
+
+  $scope.addPost = function(){
+    if(!$scope.title || $scope.title === '') { return; }
+    posts.create({
+      title: $scope.title,
+      link: $scope.link,
+    });
+    $scope.title = '';
+    $scope.link = '';
+  };
+}])
